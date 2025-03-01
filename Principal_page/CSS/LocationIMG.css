@@ -1,0 +1,72 @@
+.card, .card_Hotel2, .card_Hotel3, .card_Restaurant1, .card_Restaurant2, .card_Restaurant3, .card_CampSite{
+    border-radius: 12px;
+    background-color: #48e;
+    text-align: center;
+    display: inline-flex;
+    height: 15vw;
+    max-width: 15vw;
+    margin: 20px;
+    margin-left: 35px;
+    padding: 18px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.card_Hotel2{
+    background-color: #dd6; 
+}
+
+.card_Hotel3 {
+    background-color: #fb6;
+}
+
+.card_Restaurant1 {
+    background-color: #f66;
+}
+
+.card_Restaurant2 {
+    background-color: #ff6;
+}
+
+.card_Restaurant3 {
+    background-color: #7f4;
+}
+
+.card_CampSite {
+    background-color: #4aa;
+    margin-left: 22.5vw;
+}
+
+/* Efecto al pasar el mouse */
+.card:hover, .card_Hotel2:hover, .card_Hotel3:hover, .card_Restaurant1:hover, .card_Restaurant2:hover, .card_Restaurant3:hover, .card_CampSite:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Imagen de perfil */
+.card_img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-top: 10px;
+    border: 3px solid #fff;
+}
+
+/* Nombre */
+.card_title {
+    font-size: 22px;
+    margin: 10px 0 5px 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Subtítulo */
+.card_subtitle {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1.4px;
+    color: #000;
+}

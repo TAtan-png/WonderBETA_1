@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wondertrips</title>
+    <link rel="stylesheet" href="../CSS/Principal_style.css">
+    <link rel="stylesheet" href="../CSS/FAQ.css">
+    <link rel="icon" href="../Fotos/Wondertrips-Icono.png">
+</head>
+<body>
+    <!-- Principal Nav -->
+    <nav class="PrincipalHead right">
+        <!-- TITLE OF ANCHOR TO HOME PAGE -->
+        <h1><a href="https://www.instagram.com/wondertripss/" target="_blank" class="Anchor" title="Instagram link">wondertrips</a></h1>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar left">
+            <!-- Home Page -->
+            <a href="../../index.html" class="Selects">Home Page</a>
+            <!-- Locations -->
+            <a href="Locations.html" class="Selects">Locations</a>
+            <!-- Health -->
+            <a href="Health.html" class="Selects">Health</a>
+            <!-- Weather -->
+            <a href="Weather and seasons.html" class="Selects">Weather</a>
+            <!-- History -->
+            <a href="History.html" class="Selects">History </a>
+            <!-- FAQ -->
+            <a href="FAQ.html" class="FAQ">FAQ</a>
+            <!-- Contact me button -->
+            <a href="#contactMeSection" class="contactMe">Contact us</a>
+        </div>
+
+        <div class="Opaco"></div>
+    </nav>
+
+    <!-- Principal page content -->
+    <section class="Principal_Content middleP">
+        <!-- Title content -->
+        <h2 class="Darvasa">Frequently Asked Questions</h2>
+        <!-- Line -->
+        <hr>
+        <!-- Principal info -->
+        <p id="text" class="Questions">
+            <div class="Q">
+                <h3>How long does the fly is? <span>></span></h3>
+            </div>  
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container" id="contactMeSection">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: stobar850@gmail.com</p>
+                <p>Instagram:<a class="content" target="_blank" href="https://instagram.com/wondertripss/">wondertrips</a></p>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 wondertrips - All the rights reserved</p>
+    </footer>
+
+    <!-- Academic button -->
+    <a href="../HTML/Academic Purpose/AcademicPurpose.html" class="boton-flotante" target="_blank"><img class="AcadPurpIMG" src="../Fotos/libro-abierto.png" alt="Book">Academic Purpose</a>
+    
+    <!-- SPECIAL BOX script -->
+    <script>
+        document.querySelectorAll(".SpecialAnchor").forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); // Makes the page not to refresh
+                document.querySelectorAll(".SpecialAnchor").forEach(l => l.classList.remove("resaltado"));
+                this.classList.add("resaltado");
+            });
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let selectedLink = localStorage.getItem("selectedLink"); // Obtiene el último enlace seleccionado
+
+    document.querySelectorAll(".FAQ").forEach(link => {
+        // Si el enlace guardado en localStorage coincide, agrégale la clase "Aresaltado"
+        if (link.href === selectedLink) {
+            link.classList.add("Aresaltado");
+        }
+
+        link.addEventListener("click", function() {
+            // Quita el resaltado de todos los enlaces
+            document.querySelectorAll(".FAQ").forEach(l => l.classList.remove("Aresaltado"));
+
+            // Resalta el enlace actual
+            this.classList.add("Aresaltado");
+
+            // Guarda en localStorage para que se mantenga tras recargar la página
+            localStorage.setItem("selectedLink", this.href);
+        });
+    });
+});
+
+
+</script>
+</body>
+</html>

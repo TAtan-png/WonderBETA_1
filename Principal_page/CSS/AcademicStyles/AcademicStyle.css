@@ -1,0 +1,72 @@
+:root{
+    --blue: #107ACC;
+    --indigo: #15297C;
+    --sky-blue: #2898EE;
+    --aqua-marine: #0CBCCC;
+    --blue-marine: #142157;
+}
+
+*{
+    margin: 0;
+}
+
+html{
+    font-size: 32px;
+}
+
+body{
+    font-size: 16px;
+    border: 0;
+}
+
+.AcademicHeader, .contentT{
+    text-align: center;
+    font-family: sans-serif;
+    background: var(--blue);
+    border-radius: 20px;
+    margin: 2px;
+}
+
+.PrincipalT {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 1.6em;
+}
+
+.SecondaryT{
+    padding: 5px;
+    font-weight: 100;
+    font-size: 1.3em;
+}
+
+.contentT{
+    background: var(--sky-blue);
+}
+
+hr{
+    margin: 20PX 0;
+}
+
+.content{
+    font-size: 1.2em;
+    text-align: justify;
+    padding: 10px;
+}
+
+.Logo, img{
+    align-items: center;
+    display: flex;
+    font-size: 2.5em;
+    padding: 5px 18vw;
+    background: var(--indigo);
+    color: var(--aqua-marine);
+}
+
+.imgLOGO{
+    width: 200px;
+    margin: 0;
+}
+
+.FatherLogo{
+    text-align: justify;
+}

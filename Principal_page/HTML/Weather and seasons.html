@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wondertrips</title>
+    <link rel="stylesheet" href="../CSS/Principal_style.css">
+    <link rel="icon" href="../Fotos/Wondertrips-Icono.png">
+</head>
+<body>
+    <!-- Principal Nav -->
+    <nav class="PrincipalHead right">
+        <!-- TITLE OF ANCHOR TO HOME PAGE -->
+        <h1><a href="https://www.instagram.com/wondertripss/" class="Anchor" target="_blank" title="Home Page link: wondertrips">wondertrips</a></h1>
+
+        <!-- Principal List; content, extras, tips -->
+        <ul class="ListPU">
+            <!-- Link principal page of INFO -->
+            <li class="listitem"><p class="Anchor SpecialAnchor" title="Principal content" onclick="changeText()">Content</p></li>
+            <!-- Link to extras -->
+            <li class="listitem"><p class="Anchor SpecialAnchor" title="Extra information" onclick="changeExtra()">Extras</p></li>
+            <!-- Link to tips -->
+            <li class="listitem"><p class="Anchor SpecialAnchor" title="Tips" onclick="changeTips()">Tips</p></li>
+        </ul>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar left">
+            <!-- Home Page -->
+            <a href="../../index.html" class="Selects">Home Page</a>
+            <!-- Locations -->
+            <a href="Locations.html" class="Selects">Locations</a>
+            <!-- Health -->
+            <a href="Health.html" class="Selects">Health</a>
+            <!-- Weather -->
+            <a href="Weather and seasons.html" class="Selects">Weather</a>
+            <!-- History -->
+            <a href="History.html" class="Selects">History</a>
+            <!-- FAQ -->
+            <a href="FAQ.html" class="FAQ">FAQ</a>
+            <!-- Contact me button -->
+            <a href="#contactMeSection" class="contactMe">Contact us</a>
+        </div>
+
+        <div class="Opaco"></div>
+    </nav>
+
+    <!-- Principal page content -->
+    <section class="Principal_Content middleP">
+        <!-- Title content -->
+        <h2 class="Darvasa">Weather and seasons</h2>
+        <!-- Line -->
+        <hr>
+        <!-- Principal info -->
+        <p id="text">
+            Turkmenistan has an extreme continental climate, with very hot summers and cold, dry winters.<br><br> Spring (March-May): Pleasant climate, temperatures from 10°C to 30°C, some rain.<br><br> Summer (June-August): Very hot and dry, between 30°C and 45°C, with maximum temperatures that can exceed 50°C in the desert.<br><br> Autumn (September-November): Pleasant temperatures (15°C - 30°C), dry and stable climate.<br><br> Winter (December-February): Cold and dry, between -5°C and 10°C, with possible snowfall in the north and mountainous areas.<br><br> The best times to visit are spring and autumn, when the weather is milder and more pleasant.
+        </p>
+
+        <!-- Images home page -->
+            <!-- Subtitle -->
+            <h2 class="imgSub">Images</h2>
+            <hr>
+            <div class="collage">
+                <!-- Photo 1 -->
+                <img src="../Fotos/Weather/SPRING.png" alt="Darvasa image" class="Img img1">
+                <!-- Photo 2 -->
+                <img src="../Fotos/Weather/SUMMER.png" alt="Darvasa image" class="Img img2">
+                <!-- Photo 3 -->
+                <img src="../Fotos/Weather/Autumn.png" alt="img sunset" class="Img img3">
+                <!-- Photo 4 -->
+                <img src="../Fotos/Weather/WINTER.png" alt="Darvasa image" class="img img4">
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container" id="contactMeSection">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: stobar850@gmail.com</p>
+                <p>Instagram:<a class="content" target="_blank" href="https://instagram.com/wondertripss/">wondertrips</a></p>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 wondertrips - All the rights reserved</p>
+    </footer>
+
+    <!-- Academic button -->
+    <a href="../HTML/Academic Purpose/AcademicPurpose.html" class="boton-flotante" target="_blank"><img class="AcadPurpIMG" src="../Fotos/libro-abierto.png" alt="Book">Academic Purpose</a>
+    
+    <!-- SPECIAL BOX script -->
+    <script>
+        document.querySelectorAll(".SpecialAnchor").forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); // Makes the page not to refresh
+                document.querySelectorAll(".SpecialAnchor").forEach(l => l.classList.remove("resaltado"));
+                this.classList.add("resaltado");
+            });
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let selectedLink = localStorage.getItem("selectedLink"); // Obtiene el último enlace seleccionado
+
+    document.querySelectorAll(".Selects").forEach(link => {
+        // Si el enlace guardado en localStorage coincide, agrégale la clase "Aresaltado"
+        if (link.href === selectedLink) {
+            link.classList.add("Aresaltado");
+        }
+
+        link.addEventListener("click", function() {
+            // Quita el resaltado de todos los enlaces
+            document.querySelectorAll(".Selects").forEach(l => l.classList.remove("Aresaltado"));
+
+            // Resalta el enlace actual
+            this.classList.add("Aresaltado");
+
+            // Guarda en localStorage para que se mantenga tras recargar la página
+            localStorage.setItem("selectedLink", this.href);
+        });
+    });
+});
+
+
+</script>
+
+    <!--  CHANGE CONTENT SCRIPT-->
+    <script>
+        function changeText() {
+            document.getElementById("text").innerText = "Turkmenistan has an extreme continental climate, with very hot summers and cold, dry winters.\n\n Spring (March-May): Pleasant climate, temperatures from 10°C to 30°C, some rain.\n\n Summer (June-August): Very hot and dry, between 30°C and 45°C, with maximum temperatures that can exceed 50°C in the desert.\n\n Autumn (September-November): Pleasant temperatures (15°C - 30°C), dry and stable climate.\n\n Winter (December-February): Cold and dry, between -5°C and 10°C, with possible snowfall in the north and mountainous areas.\n\n The best times to visit are spring and autumn, when the weather is milder and more pleasant." 
+        }
+
+        function changeExtra() {
+            document.getElementById("text").innerText = "There's no extras in here😁"
+        }
+
+        function changeTips() {
+            document.getElementById("text").innerText = "- Bring a thermalbottle with you to maintain the water fresh on the high temperatures🔆\n\n"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wondertrips</title>
+    <link rel="stylesheet" href="WonderBETA/Principal_page/CSS/Principal_style.css">
+    <link rel="icon" href="WonderBETA/Principal_page/Fotos/Wondertrips-Icono.png">
+</head>
+<body>
+    <!-- Principal Nav -->
+    <nav class="PrincipalHead right">
+        <!-- TITLE OF ANCHOR TO HOME PAGE -->
+        <h1><a href="https://www.instagram.com/wondertripss/" target="_blank" class="Anchor" title="Instagram link">wondertrips</a></h1>
+
+        <!-- Principal List; content, extras, tips -->
+        <ul class="ListPU">
+            <!-- Link principal page of INFO -->
+            <li class="listitem"><p class="Anchor SpecialAnchor" title="Principal content" onclick="changeText()">Content</p></li>
+            <!-- Link to extras -->
+            <li class="listitem"><p class="Anchor SpecialAnchor" title="Extra information" onclick="changeExtra()">Extras</p></li>
+            <!-- Link to tips -->
+            <li class="listitem"><p class="Anchor SpecialAnchor" title="Tips" onclick="changeTips()">Tips</p></li>
+        </ul>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar left">
+            <!-- Home Page -->
+            <a href="WonderBETA/Principal_page/HTML/index.html" class="Selects">Home Page</a>
+            <!-- Locations -->
+            <a href="WonderBETA/Principal_page/HTML/Locations.html" class="Selects">Locations</a>
+            <!-- Health -->
+            <a href="WonderBETA/Principal_page/HTML/Health.html" class="Selects">Health</a>
+            <!-- Weather -->
+            <a href="WonderBETA/Principal_page/HTML/Weather and seasons.html" class="Selects">Weather</a>
+            <!-- History -->
+            <a href="WonderBETA/Principal_page/HTML/History.html" class="Selects">History </a>
+            <!-- FAQ -->
+            <a href="FAQ.html" class="FAQ">FAQ</a>
+            <!-- Contact me button -->
+            <a href="#contactMeSection" class="contactMe">Contact us</a>
+        </div>
+
+        <div class="Opaco"></div>
+    </nav>
+
+    <!-- Principal page content -->
+    <section class="Principal_Content middleP">
+        <!-- Title content -->
+        <h2 class="Darvasa">Darvasa Gas Crater</h2>
+        <!-- Line -->
+        <hr>
+        <!-- Principal info -->
+        <p id="text">
+            Deep in the heart of Turkmenistan’s Karakum Desert lies one of the world’s most enigmatic and awe-inspiring sights—the Darvaza Gas Crater, famously known as the “Door to Hell.” This fiery pit, spanning over 70 meters in diameter and 30 meters deep, has been ablaze for more than half a century, casting an eerie glow across the barren landscape.<br>        As night falls over the vast dunes of the Karakum, the crater becomes a hypnotic spectacle—its flames flickering and roaring like a portal to another world. The intense heat radiates outward, and the scent of burning gas lingers in the dry desert air, adding to the otherworldly atmosphere. Standing at the crater’s edge, one can’t help but marvel at the sheer power of nature and the unintended consequences of human intervention.
+            <br>
+            For the intrepid traveler, reaching the Door to Hell is an adventure in itself. A rugged off-road journey through the remote desert leads to this fiery abyss, with the surrounding wilderness offering a rare glimpse into the untouched beauty of Central Asia.<br> Camping under the starlit sky, with the glow of the crater reflecting in the distance, is an unforgettable experience—one that captures the raw essence of exploration and the mysteries hidden beneath the Earth’s surface.<br>     If you want to travel to this splendid place, travel with us , Wondertrips, if you want more information continue viewing the page. Are you ready for the adventure?<br><br>Now that you read all the information above, take a sight on the extras button so you'll be convinsed to travel with WonderTrips.
+        </p>
+
+        <!-- Images home page -->
+            <!-- Subtitle -->
+            <h2 class="imgSub">Images</h2>
+            <hr>
+            <div class="collage">
+                <!-- Photo 1 -->
+                <img src="../Fotos/Darvasa_HomePage/DarvasaNIght.png" alt="Darvasa image" class="Img img1">
+                <!-- Photo 2 -->
+                <img src="../Fotos/Darvasa_HomePage/Darvasa.jpeg" alt="Darvasa image" class="Img img2">
+                <!-- Photo 3 -->
+                <img src="../Fotos/Darvasa_HomePage/SunsetatDarvazaGasCrater.png" alt="img sunset" class="Img img3">
+                <!-- Photo 4 -->
+                <img src="../Fotos/Darvasa_HomePage/The-Door-to-Hell-Darvaza-Gas-Crater--1024x768.png" alt="Darvasa image" class="img img4">
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container" id="contactMeSection">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: stobar850@gmail.com</p>
+                <p>Instagram:<a class="content" target="_blank" href="https://instagram.com/wondertripss/">wondertrips</a></p>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 wondertrips - All the rights reserved</p>
+    </footer>
+
+    <!-- Academic button -->
+    <a href="../HTML/Academic Purpose/AcademicPurpose.html" class="boton-flotante" target="_blank"><img class="AcadPurpIMG" src="../Fotos/libro-abierto.png" alt="Book">Academic Purpose</a>
+    
+    <!-- SPECIAL BOX script -->
+    <script>
+        document.querySelectorAll(".SpecialAnchor").forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); // Makes the page not to refresh
+                document.querySelectorAll(".SpecialAnchor").forEach(l => l.classList.remove("resaltado"));
+                this.classList.add("resaltado");
+            });
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let selectedLink = localStorage.getItem("selectedLink"); // Obtiene el último enlace seleccionado
+
+    document.querySelectorAll(".Selects").forEach(link => {
+        // Si el enlace guardado en localStorage coincide, agrégale la clase "Aresaltado"
+        if (link.href === selectedLink) {
+            link.classList.add("Aresaltado");
+        }
+
+        link.addEventListener("click", function() {
+            // Quita el resaltado de todos los enlaces
+            document.querySelectorAll(".Selects").forEach(l => l.classList.remove("Aresaltado"));
+
+            // Resalta el enlace actual
+            this.classList.add("Aresaltado");
+
+            // Guarda en localStorage para que se mantenga tras recargar la página
+            localStorage.setItem("selectedLink", this.href);
+        });
+    });
+});
+
+
+</script>
+
+    <!--  CHANGE CONTENT SCRIPT-->
+    <script>
+        function changeText() {
+            document.getElementById("text").innerText = "Deep in the heart of Turkmenistan’s Karakum Desert lies one of the world’s most enigmatic and awe-inspiring sights—the Darvaza Gas Crater, famously known as the “Door to Hell.” This fiery pit, spanning over 70 meters in diameter and 30 meters deep, has been ablaze for more than half a century, casting an eerie glow across the barren landscape.\n        As night falls over the vast dunes of the Karakum, the crater becomes a hypnotic spectacle—its flames flickering and roaring like a portal to another world. The intense heat radiates outward, and the scent of burning gas lingers in the dry desert air, adding to the otherworldly atmosphere. Standing at the crater’s edge, one can’t help but marvel at the sheer power of nature and the unintended consequences of human intervention.\n For the intrepid traveler, reaching the Door to Hell is an adventure in itself. A rugged off-road journey through the remote desert leads to this fiery abyss, with the surrounding wilderness offering a rare glimpse into the untouched beauty of Central Asia.\n Camping under the starlit sky, with the glow of the crater reflecting in the distance, is an unforgettable experience—one that captures the raw essence of exploration and the mysteries hidden beneath the Earth’s surface.\n     If you want to travel to this splendid place, travel with us , Wondertrips, if you want more information continue viewing the page. Are you ready for the adventure?\n\nNow that you read all the information above, take a sight on the extras button so you'll be convinsed to travel with WonderTrips." 
+        }
+
+        function changeExtra() {
+            document.getElementById("text").innerText = "Why to travel with us?\n\n🌏Unforgibable experience - Think about it, you have traveled to a lot of places that are, either beaches or cities, very common places, beatiful, but common; however, when in life have you been on a desert where is a masive crater with eternal flames? WonderTrips thinks never.\n\n🥇Best ones on what we do - We have the best web experience with all the information neccesary for this trip, to be all prepared for the trip of your life using WonderTrips.\n\n💸Money savers - We are experts on saving your wallet by introducing to you all the for-your-wallet tips, and selected places with great cuality and cheaper costs.\n To make you know that this is not a joke, take a look on tips section."
+        }
+
+        function changeTips() {
+            document.getElementById("text").innerText = "- Did you know that if you book a fly in incognito mode on google, the fly will be cheaper💰?\n\n- The best way to get a cheaper fly is by booking your fly, first by:\n·Reserving 1-3 months before⌛️\n·Reserving on tuesday or wednesday🌤\n·Reserving in the evening(2AM) or late in night(10PM-2AM)🌓\n\nKeep the secret🤫.\n\nNow, you should know that Turkmenistan is a very strict country, we have here the general information that you should know📚\n\n- Know the Culture📕\n- Avoid public displays of affection😘\n- Avoid political discussions with locals🏛\n- Follow rules for taking photos, IMPORTANT: not taking photos to goverment buildings, monuments, or army buildings📸\n- Smoking is prohibited in public places🚬\n- and Declare foreign currency when entering and leaving the country💰.\n\nJust in WonderTrips😉."
+        }
+    </script>
+</body>
+</html>

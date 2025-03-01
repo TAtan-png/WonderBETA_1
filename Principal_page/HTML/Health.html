@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wondertrips</title>
+    <link rel="stylesheet" href="../CSS/Principal_style.css">
+    <link rel="icon" href="../Fotos/Wondertrips-Icono.png">
+</head>
+<body>
+    <!-- Principal Nav -->
+    <nav class="PrincipalHead right">
+        <!-- TITLE OF ANCHOR TO HOME PAGE -->
+        <h1><a href="https://instagram.com/wondertripss/" class="Anchor" title="Home Page link: wondertrips">wondertrips</a></h1>
+
+        <!-- Principal List; content, extras, tips -->
+        <ul class="ListPU">
+            <!-- Link principal page of INFO -->
+            <li class="listitem"><p class="Anchor SpecialAnchor" title="Principal content" onclick="changeText()">Content</p></li>
+            <!-- Link to extras -->
+            <li class="listitem"><p class="Anchor SpecialAnchor" title="Extra information" onclick="changeExtra()">Extras</p></li>
+            <!-- Link to tips -->
+            <li class="listitem"><p class="Anchor SpecialAnchor" title="Tips" onclick="changeTips()">Tips</p></li>
+        </ul>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar left">
+            <!-- Home Page -->
+            <a href="../../index.html" class="Selects">Home Page</a>
+            <!-- Locations -->
+            <a href="Locations.html" class="Selects">Locations</a>
+            <!-- Health -->
+            <a href="Health.html" class="Selects">Health</a>
+            <!-- Weather -->
+            <a href="Weather and seasons.html" class="Selects">Weather</a>
+            <!-- History -->
+            <a href="Weather and seasons.html" class="Selects">History</a>
+            <!-- FAQ -->
+            <a href="FAQ.html" class="FAQ">FAQ</a>
+            <!-- Contact me button -->
+            <a href="#contactMeSection" class="contactMe">Contact us</a>
+        </div>
+
+        <div class="Opaco"></div>
+    </nav>
+
+    <!-- Principal page content -->
+    <section class="Principal_Content middleP">
+        <!-- Title content -->
+        <h2 class="Darvasa">HEALTH INFORMATION</h2>
+        <!-- Line -->
+        <hr>
+        <!-- Principal info -->
+        <p id="text">
+            IMPORTANT: This information is truly important, please read it so you can have the best trip with no problems, your life depends on you🫵<br><br>
+            CDC recommends the flu vaccine for everyone 6 months of age and older, in addition to staying up-to-date on COVID-19 vaccinations. Depending on the destination, some regions may also require specific vaccines before travel. Changes in circadian rhythm (e.g., jet lag) and lack of sleep can trigger seizures in people with epilepsy, cause migraine attacks, and cause more behavioral symptoms in people with dementia. Everyone planning to travel should seek information or advice about potential health risks before traveling. Travelers may encounter a variety of health risks while traveling.<br> These risks can depend on many factors, including the traveler's health, the type of trip, and the destination. Health risks can arise from factors such as changes in temperature and humidity, air pollution, safety issues, access to health and dental care services and products, exposure to infectious diseases, access to safe food and water, sanitation and hygiene standards, availability of facilities and equipment for disabled people, and local laws and customs.<br><br>
+            DANGEROUS ANIMALS<br><br>In Turkmenistan, dangerous animals such as scorpions, black widow spiders and poisonous snakes can be found in desert areas.
+        </p>
+
+        <!-- Images home page -->
+            <!-- Subtitle -->
+            <h2 class="imgSub">Images</h2>
+            <hr>
+            <div class="collage">
+                <!-- Photo 1 -->
+                <img src="../Fotos/Health/SPIDER.png" alt="Darvasa image" class="Img img1">
+                <!-- Photo 2 -->
+                <img src="../Fotos/Health/SCORPION.png" alt="Darvasa image" class="Img img2">
+                <!-- Photo 3 -->
+                <img src="../Fotos/Health/SNAKE.png" alt="img sunset" class="Img img3">
+                <!-- Photo 4 -->
+                <img src="../Fotos/Health/FROG.png" alt="Darvasa image" class="img img4">
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container" id="contactMeSection">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: stobar850@gmail.com</p>
+                <p>Instagram:<a class="content" target="_blank" href="https://instagram.com/wondertripss/">wondertrips</a></p>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 wondertrips - All the rights reserved</p>
+    </footer>
+
+    <!-- Academic button -->
+    <a href="../HTML/Academic Purpose/AcademicPurpose.html" class="boton-flotante" target="_blank"><img class="AcadPurpIMG" src="../Fotos/libro-abierto.png" alt="Book">Academic Purpose</a>
+    
+    <!-- SPECIAL BOX script -->
+    <script>
+        document.querySelectorAll(".SpecialAnchor").forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); // Makes the page not to refresh
+                document.querySelectorAll(".SpecialAnchor").forEach(l => l.classList.remove("resaltado"));
+                this.classList.add("resaltado");
+            });
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let selectedLink = localStorage.getItem("selectedLink"); // Obtiene el último enlace seleccionado
+
+    document.querySelectorAll(".Selects").forEach(link => {
+        // Si el enlace guardado en localStorage coincide, agrégale la clase "Aresaltado"
+        if (link.href === selectedLink) {
+            link.classList.add("Aresaltado");
+        }
+
+        link.addEventListener("click", function() {
+            // Quita el resaltado de todos los enlaces
+            document.querySelectorAll(".Selects").forEach(l => l.classList.remove("Aresaltado"));
+
+            // Resalta el enlace actual
+            this.classList.add("Aresaltado");
+
+            // Guarda en localStorage para que se mantenga tras recargar la página
+            localStorage.setItem("selectedLink", this.href);
+        });
+    });
+});
+
+
+</script>
+
+    <!--  CHANGE CONTENT SCRIPT-->
+    <script>
+        function changeText() {
+            document.getElementById("text").innerText = "IMPORTANT: This information is truly important, please read it so you can have the best trip with no problems, your life depends on you🫵\n\n\
+            CDC recommends the flu vaccine for everyone 6 months of age and older, in addition to staying up-to-date on COVID-19 vaccinations. Depending on the destination, some regions may also require specific vaccines before travel. Changes in circadian rhythm (e.g., jet lag) and lack of sleep can trigger seizures in people with epilepsy, cause migraine attacks, and cause more behavioral symptoms in people with dementia. Everyone planning to travel should seek information or advice about potential health risks before traveling. Travelers may encounter a variety of health risks while traveling.\n These risks can depend on many factors, including the traveler's health, the type of trip, and the destination. Health risks can arise from factors such as changes in temperature and humidity, air pollution, safety issues, access to health and dental care services and products, exposure to infectious diseases, access to safe food and water, sanitation and hygiene standards, availability of facilities and equipment for disabled people, and local laws and customs.\n\nDANGEROUS ANIMALS\n\nIn Turkmenistan, dangerous animals such as scorpions, black widow spiders and poisonous snakes can be found in desert areas." 
+        }
+
+        function changeExtra() {
+            document.getElementById("text").innerText = "International travel can be stressful. Travelers may be away from family and friends and may have to adjust to foreign cultures and languages. Coping with high levels of stress can cause physical, social, and psychological problems. Changes in circadian rhythm (e.g., jet lag) and lack of sleep can trigger seizures in people with epilepsy, lead to migraine attacks, and cause more behavioral symptoms in people living with dementia so we advise taking a friend with you, a pet or a person if possible to avoid to feel lonely on the trip.\n\n mental health🧠 is also important if you want to go to Turkmenistan, take care of yourself🙋‍♀️🙋‍♂️."
+        }
+
+        function changeTips() {
+            document.getElementById("text").innerText = "Tips during the trip\:\n- Continue taking medications for chronic diseases, if applicable💊\.\n- Be aware of road safety⚠️\.\n- Take a mask eith you if a person is infected with some bacteria or virus🦠\n- Be aware of food and water safety precautions💧\.\n- Be aware of the need for protection from extreme weather conditions, such as heat waves☀️\."
+        }
+    </script>
+</body>
+</html>
