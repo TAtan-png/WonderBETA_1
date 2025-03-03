@@ -40,13 +40,52 @@
         <!-- Title content -->
         <h2 class="Darvasa">Frequently Asked Questions</h2>
         <!-- Line -->
-        <hr>
+        <hr>        
         <!-- Principal info -->
-        <p id="text" class="Questions">
-            <div class="Q">
-                <h3>How long does the fly is? <span>></span></h3>
-            </div>  
-        </p>
+        <fieldset class="faq">
+            <legend class="question" onclick="toggleAnswer(0)">How long does the fly is?</legend>
+            <p class="answer">Travel time from Guatemala, México, United States, Canadá, Spain, Germany,  South Africa, Japan to Turkmenistan depends on the route, stopovers and available airlines, as there are no direct flights. Generally, it takes at least 24 to 40 hours of travel, including stopovers. 
+            <br>and China generally takes at least 6 to 15 hours of travel</p>
+        </fieldset>
+        <fieldset class="faq">
+            <legend class="question" onclick="toggleAnswer(1)">How do I get to the Darvaza Gas Crater?</legend>
+            <p class="answer">The crater is about 4-5 hours by car from Ashgabat. Most visitors go by 4x4 tours or private drivers, as the terrain is rough.</p>
+        </fieldset>
+        <fieldset class="faq">
+            <legend class="question" onclick="toggleAnswer(2)">Do I need a visa to visit Turkmenistan?</legend>
+            <p class="answer">Yes, most travelers require a visa. You’ll need an invitation letter from a tour company.</p>
+        </fieldset>
+        <fieldset class="faq">
+            <legend class="question" onclick="toggleAnswer(3)">Is there public transportation to the crater?</legend>
+            <p class="answer">No, there are no buses or trains to Darvaza. The only way to get there is by private vehicle, tour, or taxi.
+            </p>
+        </fieldset>
+        <fieldset class="faq">
+            <legend class="question" onclick="toggleAnswer(4)">Can I visit the crater at night?</legend>
+            <p class="answer">Yes! The crater is most impressive at night when the flames glow brightly. Many tours offer overnight camping nearby, We attached one here in the web.
+            </p>
+        </fieldset>
+        <fieldset class="faq">
+            <legend class="question" onclick="toggleAnswer(5)">Is it safe to visit the Darvaza Gas Crater?</legend>
+            <p class="answer">Yes, but visitors should stay at a safe distance from the edge since the ground is unstable.
+            </p>
+        </fieldset>
+        <fieldset class="faq">
+            <legend class="question" onclick="toggleAnswer(6)">Are there restrooms at the Darvaza Gas Crater?</legend>
+            <p class="answer"> No, there are no facilities. Be prepared for basic camping conditions..
+            </p>
+        </fieldset>
+        <fieldset class="faq">
+            <legend class="question" onclick="toggleAnswer(7)">Is there anything else to see near the crater?</legend>
+            <p class="answer">Yes, there are other gas craters nearby (mud and water craters), as well as the Karakum Desert dunes.
+            </p>
+        </fieldset>
+        <script>
+            function toggleAnswer(index) {
+                let answers = document.querySelectorAll('.answer');
+                answers[index].style.display = (answers[index].style.display === 'none' || answers[index].style.display === '') ? 'block' : 'none';
+            }
+        </script>
     </section>
 
     <!-- Footer -->
@@ -54,8 +93,8 @@
         <div class="footer-container" id="contactMeSection">
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Email: stobar850@gmail.com</p>
-                <p>Instagram:<a class="content" target="_blank" href="https://instagram.com/wondertripss/">wondertrips</a></p>
+                <p>Email: wondertripsof@gmail.com</p>
+                <p>Instagram:<a class="content email" target="_blank" href="https://instagram.com/wondertripss/">wondertrips</a></p>
             </div>
         </div>
         <p class="footer-copy">© 2025 wondertrips - All the rights reserved</p>

@@ -1,12 +1,36 @@
 *{
     margin: 0;
-    box-sizing: border-box;
 }
 
-.Questions{
-    text-align: center;
+body {
+    text-align: justify;
+    font-family: sans-serif;
 }
 
-.Q{
-    
+.faq {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    margin: 20px;
+    transition:2s;
+}
+
+.question {
+    align-self: left;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.question:hover{
+    letter-spacing: 0.1px;
+    text-decoration: underline;
+    filter: drop-shadow(1px 1px 1px #FFC7A8);
+    -webkit-filter: drop-shadow(1px 1px 1px #FFC7A8);
+}
+
+.answer { 
+    display: none;
+    margin-top: 5px;
+    font-weight: 100; 
+    font-size: 0.7em;
 }
